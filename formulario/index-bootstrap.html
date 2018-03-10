@@ -1,0 +1,88 @@
+<!doctype html>
+
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Plantilla básica de Bootstrap</title>
+
+	<!-- Latest compiled and minified CSS, https://getbootstrap.com/docs/3.3/getting-started/ -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link  >
+</head>
+<body>
+ <div id="wrapper" >
+
+	<nav class="navabar navnbar-default">
+		<div class="navbar navbar-header" >
+			<a href="index.html">Inicio</a>
+		</div>
+		<a href="Equipos de Alto Parana.html">Equipos de Alto Paraná</a>
+		<a href="Principiante.html">Principiantes</a>
+	</nav>
+
+	<div class="panel-body">
+		<div class="row">
+			<div class="col-md-6">
+				<form id ="formEvento">
+					<div class="form-group">
+						<label for="nombre">Nombre</label>
+						<input type="text" class="form-control" id="nombre" placeholder="Nombre">
+					</div>
+					<div class="form-group">
+						<label for="descripcion">Descripcion</label>
+						<input type="text" class="form-control" id="descripcion" placeholder="">
+					</div>
+					<div class="form-group">
+						<label for="direccion">Direccion</label>
+						<input type="text" class="form-control" id="direccion" placeholder="">
+						<!-- Enviar1
+						<button type="button" class ="btn btn-success" onclick="enviarDatos()">Enviar</button> -->
+
+					</div>
+					<div class="form-group">
+						<label for="ciudad">Ciudad</label>
+						<select class="form-control" id="ciudad" name="ciudad" placeholder="">
+							<option>CDE</option>
+							<option selected>Asuncion</option>
+							<option>Hernandarias</option>
+						</select>
+						<button type="button" class ="btn btn-success" onclick="enviar()">Enviar</button>
+					</div>
+				</form>
+				<script>
+					//console.log(document);
+					var nombre = document.getElementById("nombre");
+					console.log(nombre);
+					function enviarDatos(){
+						console.log("Datos creados");
+						var nombre = document.getElementById("nombre").value;
+						console.log(nombre);
+						console.log("----------------");
+						console.log(document.getElementsByClassName("form-group"));
+					}
+
+					function enviar(){
+						var nombre = document.getElementById("nombre").value;
+						console.log(nombre);
+						var descripcion = document.getElementById("descripcion").value;
+						console.log(descripcion);
+						var direccion = document.getElementById("direccion").value;
+						console.log(direccion);
+						//forma facil de obtener el mensaje
+					  var ciudad1 = document.getElementById("ciudad").value;
+						//forma complicada para manipular el DOM
+						var indexCiudad = document.getElementById("formEvento").elements.namedItem("ciudad").selectedIndex;
+						var ciudad = document.getElementById("formEvento").elements.namedItem("ciudad").options[indexCiudad].value ;
+						console.log(ciudad1);
+						console.log("Datos completos: "+nombre+" "+descripcion+" "+direccion);
+					}
+				</script>
+
+			</div>
+		</div>
+	</div>
+ </div>
+</body>
+</html>
