@@ -1,0 +1,27 @@
+{
+  "name": "javascript",
+  "version": "1.0.0",
+  "description": "Sistema de Administracion de Eventos del GDG CDE",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grisec/bootcamp.git"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "grise",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/grisec/bootcamp/issues"
+  },
+  "homepage": "https://github.com/grisec/bootcamp#readme",
+  "dependencies": {
+    "sequelize": "^4.35.5",
+    "sequelize-cli": "^4.0.0",
+    "sqlite3": "^3.1.13"
+  }
+}
